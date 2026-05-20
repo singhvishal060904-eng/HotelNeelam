@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Neelam - Luxury stays, rooms & boutique hotel experience in Vindhyanagar, Singrauli. Book your premium stay near Shiva Ji Complex.">
+    <meta name="keywords" content="Hotel Neelam, Neelam Palace Hotel, Singrauli hotel, Vindhyanagar hotel, Navjeevan Vihar, luxury stay, Madhya Pradesh hotel">
+    <meta name="author" content="Hotel Neelam">
+    <title>Hotel Neelam | Luxury Stay in Vindhyanagar, Singrauli</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                        sans: ['Poppins', 'Inter', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        gold: {
+                            50: '#fdf8f0',
+                            100: '#f9eddb',
+                            200: '#f2d7b0',
+                            300: '#e9bc7a',
+                            400: '#df9f4a',
+                            500: '#C9A96E',
+                            600: '#b8934f',
+                            700: '#9a7840',
+                            800: '#7d6238',
+                            900: '#665031',
+                        },
+                        warm: {
+                            50: '#faf7f2',
+                            100: '#f5f0e8',
+                            200: '#ebe0d0',
+                            300: '#dcc8ad',
+                            400: '#c9a87e',
+                            500: '#b8915a',
+                            600: '#a67c4a',
+                            700: '#8B7355',
+                            800: '#725e46',
+                            900: '#5e4d3b',
+                        },
+                        dark: {
+                            50: '#f5f5f5',
+                            100: '#e0e0e0',
+                            200: '#bdbdbd',
+                            300: '#9e9e9e',
+                            400: '#757575',
+                            500: '#4a4a4a',
+                            600: '#2d2d2d',
+                            700: '#1a1a1a',
+                            800: '#0d0d0d',
+                            900: '#050505',
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- AOS Animation CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --gold: #C9A96E;
+            --gold-dark: #a67c4a;
+            --dark: #0d0d0d;
+            --dark-secondary: #1a1a1a;
+            --warm: #8B7355;
+            --beige: #f5f0e8;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.12);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', 'Poppins', sans-serif;
+            background-color: #050505;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        /* Scroll Progress Bar */
+        #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #C9A96E, #e9bc7a, #C9A96E);
+            z-index: 99999;
+            transition: width 0.1s linear;
+            border-radius: 0 2px 2px 0;
+            box-shadow: 0 0 10px rgba(201, 169, 110, 0.6);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0d0d0d;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C9A96E;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #a67c4a;
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--glass-shadow);
+            border-radius: 16px;
+        }
+        .glass-light {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+        }
+
+        /* Gold Glow Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #C9A96E, #a67c4a);
+            color: #fff;
+            border: none;
+            padding: 14px 32px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            box-shadow: 0 4px 20px rgba(201, 169, 110, 0.35);
+            position: relative;
+            overflow: hidden;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-gold:hover {
+            box-shadow: 0 8px 35px rgba(201, 169, 110, 0.55);
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #d4b87a, #b8934f);
+        }
+        .btn-gold::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        .btn-gold:hover::after {
+            opacity: 1;
+        }
+        .btn-outline-gold {
+            background: transparent;
+            color: #C9A96E;
+            border: 2px solid #C9A96E;
+            padding: 13px 30px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        .btn-outline-gold:hover {
+            background: #C9A96E;
+            color: #fff;
+            box-shadow: 0 8px 30px rgba(201, 169, 110, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Image Hover Zoom */
+        .img-zoom-container {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .img-zoom-container img {
+            transition: transform 0.7s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Gallery card hover */
+        .gallery-card {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .gallery-card img {
+            transition: transform 0.7s;
+        }
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.4);
+            opacity: 0;
+            transition: opacity 0.4s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .gallery-card:hover .overlay {
+            opacity: 1;
+        }
+        .gallery-card .overlay i {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        /* Parallax */
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+            animation: floatPulse 3s ease-in-out infinite;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 40px rgba(37, 211, 102, 0.7);
+        }
+        .whatsapp-float i {
+            font-size: 30px;
+            color: #fff;
+        }
+        @keyframes floatPulse {
+            0%,100% { box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5); }
+            50% { box-shadow: 0 8px 50px rgba(37, 211, 102, 0.8); }
+        }
+
+        /* Back to Top */
+        #back-to-top {
+            position: fixed;
+            bottom: 105px;
+            right: 30px;
+            z-index: 9998;
+            width: 48px;
+            height: 48px;
+            background: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s;
+            box-shadow: 0 4px 20px rgba(201,169,110,0.4);
+            border: none;
+            color: #fff;
+            font-size: 18px;
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        #back-to-top:hover {
+            background: #a67c4a;
+            transform: translateY(-3px);
+        }
+
+        /* Navbar */
+        #navbar {
+            transition: all 0.4s;
+            z-index: 9990;
+        }
+        #navbar.scrolled {
+            background: rgba(10,10,10,0.95) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.5);
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #C9A96E;
+            transition: width 0.4s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero slider */
+        .hero-slide {
+            height: 100vh;
+            min-height: 700px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35) 40%, rgba(0,0,0,0.65));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .reveal-text {
+            animation: revealUp 1s forwards;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        .reveal-text:nth-child(2) { animation-delay: 0.3s; }
+        .reveal-text:nth-child(3) { animation-delay: 0.6s; }
+        @keyframes revealUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            animation: bounceDown 2s infinite;
+            cursor: pointer;
+        }
+        .scroll-indicator span {
+            color: #fff;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+        }
+        .scroll-indicator .line {
+            width: 2px;
+            height: 40px;
+            background: #C9A96E;
+        }
+        @keyframes bounceDown {
+            0%,100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(15px); }
+        }
+
+        /* Room card hover */
+        .room-card {
+            transition: all 0.5s cubic-bezier(0.25,0.8,0.25,1);
+            border-radius: 16px;
+            overflow: hidden;
+            background: #1a1a1a;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,169,110,0.5);
+            border-color: rgba(201,169,110,0.5);
+        }
+
+        /* Counter */
+        .counter-number {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* Vish float */
+        .vish-float {
+            display: inline-block;
+            animation: vishFloat 3s infinite;
+            color: #C9A96E;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        @keyframes vishFloat {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Mobile menu */
+        #mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: rgba(5,5,5,0.98);
+            z-index: 9998;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        #mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Glass effect for restaurant dish cards */
+        .dish-card {
+            background: rgba(255,255,255,0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.5s;
+        }
+        .dish-card:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Admin panel hidden by default */
+        #admin-panel {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 99995;
+            background: rgba(0,0,0,0.95);
+            overflow-y: auto;
+        }
+        #admin-panel.active {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-slide { min-height: 600px; }
+        }
+    </style>
+</head>
+<body class="bg-dark-900 text-gray-200">
+    <div id="scroll-progress"></div>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-[9990] py-5 px-4 md:px-8 bg-transparent">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="#" class="text-2xl md:text-3xl font-serif font-bold text-white tracking-wider no-underline">
+                Hotel <span class="text-gold-500">Neelam</span>
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#home" class="nav-link text-white text-sm uppercase no-underline">Home</a>
+                <a href="#about" class="nav-link text-white text-sm uppercase no-underline">About</a>
+                <a href="#rooms" class="nav-link text-white text-sm uppercase no-underline">Rooms</a>
+                <a href="#facilities" class="nav-link text-white text-sm uppercase no-underline">Facilities</a>
+                <a href="#gallery" class="nav-link text-white text-sm uppercase no-underline">Gallery</a>
+                <a href="#restaurant" class="nav-link text-white text-sm uppercase no-underline">Restaurant</a>
+                <a href="#testimonials" class="nav-link text-white text-sm uppercase no-underline">Reviews</a>
+                <a href="#contact" class="nav-link text-white text-sm uppercase no-underline">Contact</a>
+                <a href="#book" class="btn-gold text-sm !py-2.5 !px-6 no-underline">Book Now</a>
+            </div>
+            <button id="hamburger-btn" class="lg:hidden text-white text-2xl bg-transparent border-none cursor-pointer">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu">
+        <a href="#home" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Home</a>
+        <a href="#about" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">About</a>
+        <a href="#rooms" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Rooms</a>
+        <a href="#facilities" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Facilities</a>
+        <a href="#gallery" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Gallery</a>
+        <a href="#restaurant" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Restaurant</a>
+        <a href="#testimonials" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Reviews</a>
+        <a href="#contact" class="text-white text-xl uppercase no-underline" onclick="closeMobileMenu()">Contact</a>
+        <a href="#book" class="btn-gold text-lg no-underline" onclick="closeMobileMenu()">Book Now</a>
+    </div>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="relative w-full overflow-hidden">
+        <div id="hero-slider-container" class="swiper hero-swiper w-full h-screen min-h-[700px]">
+            <div class="swiper-wrapper" id="hero-slides-wrapper"></div>
+            <div class="swiper-pagination !bottom-28 md:!bottom-20"></div>
+        </div>
+        <div class="scroll-indicator" onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </section>
+
+    <!-- ==================== BOOKING FORM ==================== -->
+    <section id="book" class="relative -mt-20 z-10 px-4">
+        <div class="max-w-5xl mx-auto glass-card p-6 md:p-10" data-aos="fade-up">
+            <h3 class="text-2xl md:text-3xl font-serif font-bold text-white text-center mb-8">Check Availability</h3>
+            <form id="booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-end">
+                <div>
+                    <label class="block text-gold-400 text-xs uppercase mb-2">Check-in</label>
+                    <input type="date" id="checkin" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-gold-400 text-xs uppercase mb-2">Check-out</label>
+                    <input type="date" id="checkout" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-gold-500">
+                </div>
+                <div>
+                    <label class="block text-gold-400 text-xs uppercase mb-2">Adults</label>
+                    <select id="adults" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-gold-500">
+                        <option value="1">1 Adult</option><option value="2" selected>2 Adults</option>
+                        <option value="3">3 Adults</option><option value="4">4 Adults</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gold-400 text-xs uppercase mb-2">Room Type</label>
+                    <select id="room-type-select" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-gold-500">
+                        <option value="Deluxe Room">Deluxe Room</option>
+                        <option value="AC Room">AC Room</option>
+                        <option value="Suite">Suite</option>
+                        <option value="Family Room">Family Room</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="btn-gold w-full text-sm !py-3">Check Availability</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="py-20 md:py-28 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="img-zoom-container rounded-2xl overflow-hidden" data-aos="fade-right">
+                <img id="about-image" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&q=80" alt="Hotel Neelam" class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl">
+            </div>
+            <div data-aos="fade-left">
+                <p class="text-gold-400 uppercase tracking-[3px] text-sm mb-3">About Hotel Neelam</p>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">A Luxurious Haven of Serenity</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">Located near Shiva Ji Complex on Vindhyanagar-Waidhan Road, Hotel Neelam offers an unmatched blend of contemporary comfort and warm hospitality. Established in 2016, we have been serving guests with dedication.</p>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> <span>Free WiFi</span></div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> <span>Free Parking</span></div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> <span>Restaurant</span></div>
+                    <div class="flex items-center gap-3"><i class="fas fa-check-circle text-gold-500"></i> <span>AC Rooms</span></div>
+                </div>
+                <a href="#contact" class="btn-gold inline-block no-underline">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ROOMS SECTION ==================== -->
+    <section id="rooms" class="py-20 md:py-28 px-4 bg-dark-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-14" data-aos="fade-up">
+                <p class="text-gold-400 uppercase tracking-[3px] text-sm mb-3">Our Accommodations</p>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-4">Rooms & Suites</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Discover our carefully curated selection of comfortable rooms and suites.</p>
+            </div>
+            <div id="rooms-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <!-- ==================== FACILITIES ==================== -->
+    <section id="facilities" class="py-20 md:py-28 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-14" data-aos="fade-up">
+            <p class="text-gold-400 uppercase text-sm mb-3">What We Offer</p>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">Hotel Facilities</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-wifi text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Free WiFi</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-parking text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Free Parking</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-utensils text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Restaurant</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-coffee text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Breakfast Free</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-snowflake text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">AC Rooms</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-concierge-bell text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Room Service</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-clock text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">24/7 Front Desk</h4></div>
+            <div class="glass-light p-6 text-center hover:scale-105 transition-transform"><i class="fas fa-car text-gold-500 text-3xl mb-4"></i><h4 class="text-white font-semibold">Airport Pickup</h4></div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY ==================== -->
+    <section id="gallery" class="py-20 md:py-28 px-4 bg-dark-800">
+        <div class="max-w-7xl mx-auto text-center mb-14" data-aos="fade-up">
+            <p class="text-gold-400 uppercase text-sm mb-3">Our Gallery</p>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">Photo Gallery</h2>
+        </div>
+        <div id="gallery-grid" class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[99980] bg-black/95 hidden items-center justify-center cursor-pointer" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Lightbox" class="max-w-[90vw] max-h-[85vh] object-contain rounded-lg">
+        <button class="absolute top-6 right-6 text-white text-3xl" onclick="closeLightbox()">&times;</button>
+    </div>
+
+    <!-- ==================== RESTAURANT ==================== -->
+    <section id="restaurant" class="py-20 md:py-28 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-14" data-aos="fade-up">
+            <p class="text-gold-400 uppercase text-sm mb-3">Culinary Delights</p>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">Our Restaurant</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="dish-card rounded-2xl overflow-hidden" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=80" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <h4 class="text-white font-serif text-xl font-bold">Butter Naan Platter</h4>
+                    <p class="text-gray-400 text-sm mt-2">Fresh tandoori butter naan with dal makhani</p>
+                    <span class="text-gold-500 font-bold text-lg mt-3 block">₹250</span>
+                </div>
+            </div>
+            <div class="dish-card rounded-2xl overflow-hidden" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=500&q=80" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <h4 class="text-white font-serif text-xl font-bold">Paneer Tikka Masala</h4>
+                    <p class="text-gray-400 text-sm mt-2">Cottage cheese in rich tomato gravy</p>
+                    <span class="text-gold-500 font-bold text-lg mt-3 block">₹320</span>
+                </div>
+            </div>
+            <div class="dish-card rounded-2xl overflow-hidden" data-aos="fade-up">
+                <img src="https://images.unsplash.com/photo-1558030006-450675393462?w=500&q=80" class="w-full h-56 object-cover">
+                <div class="p-5">
+                    <h4 class="text-white font-serif text-xl font-bold">Biryani Special</h4>
+                    <p class="text-gray-400 text-sm mt-2">Fragrant basmati rice with tender meat</p>
+                    <span class="text-gold-500 font-bold text-lg mt-3 block">₹380</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS ==================== -->
+    <section id="testimonials" class="py-20 md:py-28 px-4 bg-dark-800">
+        <div class="max-w-5xl mx-auto text-center mb-14" data-aos="fade-up">
+            <p class="text-gold-400 uppercase text-sm mb-3">Guest Reviews</p>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white">What Our Guests Say</h2>
+        </div>
+        <div class="swiper testimonial-swiper max-w-5xl mx-auto">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide text-center px-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-20 h-20 rounded-full mx-auto mb-5 border-2 border-gold-500">
+                    <div class="stars mb-3"><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i></div>
+                    <p class="text-gray-300 italic text-lg">"My stay at Hotel Neelam was absolutely perfect. Rooms were clean and well-maintained."</p>
+                    <h5 class="text-white font-bold mt-4">Umesh Sharma</h5>
+                </div>
+                <div class="swiper-slide text-center px-4">
+                    <img src="https://randomuser.me/api/portraits/men/45.jpg" class="w-20 h-20 rounded-full mx-auto mb-5 border-2 border-gold-500">
+                    <div class="stars mb-3"><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star text-gold-500"></i><i class="fas fa-star-half-alt text-gold-500"></i></div>
+                    <p class="text-gray-300 italic text-lg">"Nice food here, good for party. Great value for money."</p>
+                    <h5 class="text-white font-bold mt-4">Brajesh Choudhary</h5>
+                </div>
+            </div>
+            <div class="swiper-pagination !mt-8 !relative"></div>
+        </div>
+    </section>
+
+    <!-- ==================== STATS ==================== -->
+    <section class="py-16 px-4 bg-dark-900">
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div><div class="counter-number text-4xl md:text-5xl text-gold-500" data-target="12000">0</div><p class="text-gray-400 mt-2">Happy Guests</p></div>
+            <div><div class="counter-number text-4xl md:text-5xl text-gold-500" data-target="40">0</div><p class="text-gray-400 mt-2">Rooms</p></div>
+            <div><div class="counter-number text-4xl md:text-5xl text-gold-500" data-target="50">0</div><p class="text-gray-400 mt-2">Staff</p></div>
+            <div><div class="counter-number text-4xl md:text-5xl text-gold-500" data-target="10">0</div><p class="text-gray-400 mt-2">Years Exp.</p></div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section id="cta" class="py-20 px-4 parallax-bg text-center" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80');">
+        <div class="absolute inset-0 bg-black/65"></div>
+        <div class="relative z-10 max-w-3xl mx-auto" data-aos="zoom-in">
+            <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Book Your Luxury Stay Today</h2>
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#book" class="btn-gold no-underline">Reserve Now</a>
+                <a href="https://wa.me/917773010301" target="_blank" class="btn-outline-gold no-underline !border-white !text-white hover:!bg-white hover:!text-dark-800">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-20 md:py-28 px-4 bg-dark-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div data-aos="fade-right">
+                <p class="text-gold-400 uppercase text-sm mb-3">Get In Touch</p>
+                <h2 class="text-3xl md:text-5xl font-serif font-bold text-white mb-6">Contact Us</h2>
+                <form id="contact-form" class="space-y-5">
+                    <input type="text" placeholder="Your Name" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-5 py-3.5 focus:outline-none focus:border-gold-500">
+                    <input type="email" placeholder="Your Email" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-5 py-3.5 focus:outline-none focus:border-gold-500">
+                    <input type="tel" placeholder="Phone Number" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-5 py-3.5 focus:outline-none focus:border-gold-500">
+                    <textarea rows="5" placeholder="Your Message" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-5 py-3.5 focus:outline-none focus:border-gold-500 resize-none"></textarea>
+                    <button type="submit" class="btn-gold w-full">Send Message</button>
+                </form>
+            </div>
+            <div data-aos="fade-left" class="flex flex-col gap-6">
+                <div class="glass-light p-6 flex items-start gap-4">
+                    <i class="fas fa-map-marker-alt text-gold-500 text-2xl mt-1"></i>
+                    <div><h5 class="text-white font-bold text-lg">Address</h5><p class="text-gray-400">Near Shiva Ji Complex, Vindhyanagar - Waidhan Rd, Navjeevan Vihar, Madhya Pradesh 486886</p></div>
+                </div>
+                <div class="glass-light p-6 flex items-start gap-4">
+                    <i class="fas fa-phone text-gold-500 text-2xl mt-1"></i>
+                    <div><h5 class="text-white font-bold text-lg">Phone</h5><p class="text-gray-400">+91 7773010301</p></div>
+                </div>
+                <div class="glass-light p-6 flex items-start gap-4">
+                    <i class="fas fa-envelope text-gold-500 text-2xl mt-1"></i>
+                    <div><h5 class="text-white font-bold text-lg">Email</h5><p class="text-gray-400">info@hotelneelam.com</p></div>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#" class="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/917773010301" target="_blank" class="w-12 h-12 rounded-full bg-dark-700 flex items-center justify-center text-gold-500 hover:bg-gold-500 hover:text-white transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="rounded-xl overflow-hidden h-64 bg-dark-700">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.123!2d82.65!3d24.10!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z!5e0!3m2!1sen!2sin!4v1600000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-dark-900 pt-16 pb-8 px-4 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+            <div>
+                <h3 class="text-2xl font-serif font-bold text-white mb-4">Hotel <span class="text-gold-500">Neelam</span></h3>
+                <p class="text-gray-400">Experience unparalleled comfort and hospitality in Vindhyanagar.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Quick Links</h4>
+                <ul class="space-y-2">
+                    <li><a href="#home" class="text-gray-400 hover:text-gold-500 no-underline">Home</a></li>
+                    <li><a href="#rooms" class="text-gray-400 hover:text-gold-500 no-underline">Rooms</a></li>
+                    <li><a href="#gallery" class="text-gray-400 hover:text-gold-500 no-underline">Gallery</a></li>
+                    <li><a href="#contact" class="text-gray-400 hover:text-gold-500 no-underline">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-lg mb-4">Newsletter</h4>
+                <form id="newsletter-form" class="flex gap-2">
+                    <input type="email" placeholder="Your email" required class="flex-1 bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:border-gold-500">
+                    <button type="submit" class="btn-gold !py-3 !px-5 text-sm">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center pt-6 border-t border-gray-800">
+            <p class="text-gray-500 text-sm">&copy; 2026 Hotel Neelam. All rights reserved. | Near Shiva Ji Complex, Vindhyanagar - Waidhan Rd, Navjeevan Vihar, MP 486886</p>
+            <p class="text-gray-600 text-sm mt-3">Made with 💛 from</p>
+            <p class="text-lg mt-1"><span class="vish-float">VISH</span></p>
+            <p class="text-gray-700 text-xs mt-4 opacity-60 cursor-default select-none" id="admin-trigger" title="Admin Access">◆</p>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/917773010301" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+    <!-- ==================== ADMIN PANEL (HIDDEN) ==================== -->
+    <div id="admin-panel">
+        <div id="admin-login-screen" class="min-h-screen flex items-center justify-center px-4">
+            <div class="glass-card p-10 max-w-md w-full text-center">
+                <i class="fas fa-lock text-gold-500 text-5xl mb-6"></i>
+                <h3 class="text-2xl font-serif font-bold text-white mb-6">Admin Panel</h3>
+                <input type="password" id="admin-password" placeholder="Enter Password" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-5 py-3.5 text-center mb-4" onkeydown="if(event.key==='Enter') loginAdmin()">
+                <button onclick="loginAdmin()" class="btn-gold w-full">Login</button>
+                <p id="admin-error" class="text-red-400 text-sm mt-3 hidden">Incorrect password</p>
+                <button onclick="closeAdminPanel()" class="text-gray-500 hover:text-white mt-6 text-sm bg-transparent border-none">← Back to Website</button>
+            </div>
+        </div>
+        <div id="admin-dashboard" class="hidden min-h-screen px-4 py-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="flex justify-between mb-8">
+                    <h2 class="text-3xl font-serif font-bold text-white">Dashboard</h2>
+                    <div class="flex gap-3">
+                        <button onclick="logoutAdmin()" class="btn-outline-gold text-sm !py-2 !px-5">Logout</button>
+                        <button onclick="closeAdminPanel()" class="text-gray-400 hover:text-white bg-transparent text-sm">Close</button>
+                    </div>
+                </div>
+                <!-- Site Images Management -->
+                <div class="glass-card p-6 mb-8">
+                    <h3 class="text-xl font-serif font-bold text-white mb-5">Site Images</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="text-gold-400 text-xs uppercase">Hero Images (comma separated URLs)</label>
+                            <input type="text" id="hero-images-input" placeholder="url1, url2, url3" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 mt-2">
+                        </div>
+                        <div>
+                            <label class="text-gold-400 text-xs uppercase">About Image URL</label>
+                            <input type="text" id="about-image-input" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 mt-2">
+                        </div>
+                        <div>
+                            <label class="text-gold-400 text-xs uppercase">CTA Background URL</label>
+                            <input type="text" id="cta-image-input" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3 mt-2">
+                        </div>
+                        <button onclick="saveSiteImages()" class="btn-gold">Update Images</button>
+                    </div>
+                </div>
+                <!-- Room Management -->
+                <div class="glass-card p-6 mb-8">
+                    <h3 class="text-xl font-serif font-bold text-white mb-5">Add New Room</h3>
+                    <form id="add-room-form" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <input type="text" id="room-name" placeholder="Room Name" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                        <input type="number" id="room-price" placeholder="Price per Night" required class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                        <input type="text" id="room-amenities" placeholder="Amenities (comma)" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                        <input type="text" id="room-description" placeholder="Short Description" class="w-full bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                        <div class="md:col-span-2">
+                            <label class="text-gold-400 text-xs uppercase">Room Image</label>
+                            <div class="flex gap-3 mt-2">
+                                <input type="file" id="room-image-file" accept="image/*" class="text-gray-400 text-sm file:py-2 file:px-5 file:rounded-full file:bg-gold-500 file:text-white file:border-0">
+                                <input type="url" id="room-image-url" placeholder="Or paste URL" class="flex-1 bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                            </div>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="btn-gold">Add Room</button>
+                            <span id="upload-status" class="text-gray-400 text-sm ml-4 hidden"></span>
+                        </div>
+                    </form>
+                </div>
+                <div class="glass-card p-6 mb-8">
+                    <h3 class="text-xl font-serif font-bold text-white mb-5">Current Rooms</h3>
+                    <div id="admin-rooms-list" class="space-y-4"></div>
+                </div>
+                <!-- Gallery Management -->
+                <div class="glass-card p-6">
+                    <h3 class="text-xl font-serif font-bold text-white mb-5">Manage Gallery</h3>
+                    <div class="flex gap-3 mb-5">
+                        <input type="url" id="gallery-url" placeholder="Image URL" class="flex-1 bg-dark-700 border border-gray-600 text-white rounded-lg px-4 py-3">
+                        <button onclick="addGalleryImage()" class="btn-gold">Add</button>
+                    </div>
+                    <div id="admin-gallery-list" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase & Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 80 });
+
+        // Firebase init
+        const firebaseConfig = {
+            apiKey: "AIzaSyCvsAzP_fIc56P-AWKBfxsHQea2OXIxeQ8",
+            authDomain: "gemsbakers-10162.firebaseapp.com",
+            projectId: "gemsbakers-10162",
+            storageBucket: "gemsbakers-10162.firebasestorage.app",
+            messagingSenderId: "651793440647",
+            appId: "1:651793440647:web:90c53b28a0aaa100773d22",
+            measurementId: "G-6T5BNSDW5W"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        const IMGBB_API_KEY = '3a713cdc48e7eec3648b2406983d1bab';
+        const WHATSAPP_NUMBER = '917773010301';
+        const ADMIN_PASSWORD = 'Vish0617';
+
+        // Default data
+        const defaultRooms = [
+            { id: 'room_1', name: 'Deluxe AC Room', price: 1200, amenities: 'AC, WiFi, TV', description: 'Comfortable AC room', image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80' },
+            { id: 'room_2', name: 'Super Deluxe Room', price: 1800, amenities: 'AC, WiFi, TV, Sofa', description: 'Spacious premium room', image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80' },
+            { id: 'room_3', name: 'Family Room', price: 2500, amenities: 'AC, WiFi, Extra Bed', description: 'Ideal for families', image: 'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&q=80' },
+            { id: 'room_4', name: 'Suite Room', price: 3500, amenities: 'AC, Living Area, Mini Bar', description: 'Luxury suite', image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80' }
+        ];
+        const defaultGallery = [
+            'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80',
+            'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80',
+            'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80',
+            'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=600&q=80'
+        ];
+        const defaultSite = {
+            heroImages: [
+                'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80',
+                'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1600&q=80',
+                'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80'
+            ],
+            aboutImage: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=700&q=80',
+            ctaBackground: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600&q=80'
+        };
+
+        let roomsData = [];
+        let galleryData = [];
+        let siteData = { ...defaultSite };
+
+        async function loadData() {
+            try {
+                const roomsSnap = await db.collection('rooms').get();
+                if (!roomsSnap.empty) {
+                    roomsData = roomsSnap.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+                } else {
+                    const batch = db.batch();
+                    defaultRooms.forEach(room => {
+                        const ref = db.collection('rooms').doc(room.id);
+                        batch.set(ref, { name: room.name, price: room.price, amenities: room.amenities, description: room.description, image: room.image });
+                    });
+                    await batch.commit();
+                    roomsData = [...defaultRooms];
+                }
+
+                const galleryDoc = await db.collection('settings').doc('gallery').get();
+                if (galleryDoc.exists && galleryDoc.data().images) {
+                    galleryData = galleryDoc.data().images;
+                } else {
+                    await db.collection('settings').doc('gallery').set({ images: defaultGallery });
+                    galleryData = [...defaultGallery];
+                }
+
+                const siteDoc = await db.collection('settings').doc('site').get();
+                if (siteDoc.exists) {
+                    siteData = { ...defaultSite, ...siteDoc.data() };
+                } else {
+                    await db.collection('settings').doc('site').set(defaultSite);
+                }
+            } catch (e) {
+                console.error('Firebase load error, using defaults', e);
+                roomsData = [...defaultRooms];
+                galleryData = [...defaultGallery];
+            }
+            renderAll();
+        }
+
+        function renderAll() {
+            renderHeroSlider();
+            renderAboutImage();
+            renderCTABackground();
+            renderRooms();
+            renderGallery();
+            renderAdminRoomsList();
+            renderAdminGalleryList();
+            populateSiteImageInputs();
+        }
+
+        function renderHeroSlider() {
+            const wrapper = document.getElementById('hero-slides-wrapper');
+            wrapper.innerHTML = siteData.heroImages.map(url => `
+                <div class="swiper-slide hero-slide" style="background-image: url('${url}');">
+                    <div class="hero-content text-center px-4 max-w-4xl mx-auto">
+                        <p class="reveal-text text-gold-400 uppercase tracking-[4px] text-sm md:text-base mb-4">A Best Place To Stay</p>
+                        <h1 class="reveal-text text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6">Luxury Experience Awaits</h1>
+                        <p class="reveal-text text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">Discover unparalleled elegance at Hotel Neelam.</p>
+                        <div class="reveal-text flex gap-4 justify-center" style="animation-delay: 0.9s;">
+                            <a href="#book" class="btn-gold no-underline">Book Now</a>
+                            <a href="#rooms" class="btn-outline-gold no-underline">Explore Rooms</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            if (window.heroSwiper) window.heroSwiper.destroy();
+            window.heroSwiper = new Swiper('.hero-swiper', {
+                loop: true,
+                autoplay: { delay: 5000 },
+                speed: 1000,
+                effect: 'fade',
+                pagination: { el: '.swiper-pagination', clickable: true }
+            });
+        }
+
+        function renderAboutImage() {
+            document.getElementById('about-image').src = siteData.aboutImage;
+        }
+
+        function renderCTABackground() {
+            const cta = document.getElementById('cta');
+            cta.style.backgroundImage = `url('${siteData.ctaBackground}')`;
+        }
+
+        function renderRooms() {
+            const grid = document.getElementById('rooms-grid');
+            grid.innerHTML = roomsData.map((room, i) => `
+                <div class="room-card" data-aos="fade-up" data-aos-delay="${i*100}">
+                    <div class="img-zoom-container rounded-t-2xl">
+                        <img src="${room.image}" alt="${room.name}" class="w-full h-64 object-cover rounded-t-2xl" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80'">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="text-white font-serif text-xl font-bold">${room.name}</h4>
+                            <span class="text-gold-500 font-bold text-lg">₹${room.price.toLocaleString('en-IN')}<small class="text-gray-500 text-xs">/night</small></span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">${room.description}</p>
+                        <div class="flex flex-wrap gap-2 mb-4">${room.amenities.split(',').map(a => `<span class="text-xs bg-dark-700 text-gray-300 px-3 py-1 rounded-full">${a.trim()}</span>`).join('')}</div>
+                        <a href="https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Hotel%20Neelam!%20I'm%20interested%20in%20the%20${encodeURIComponent(room.name)}%20(%E2%82%B9${room.price}%2Fnight).%20Please%20share%20availability." target="_blank" class="btn-gold text-sm !py-2.5 !px-5 inline-block no-underline w-full text-center">Book Now <i class="fab fa-whatsapp ml-1"></i></a>
+                    </div>
+                </div>
+            `).join('');
+            AOS.refresh();
+        }
+
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = galleryData.map((url, i) => `
+                <div class="gallery-card img-zoom-container" data-aos="fade-up" data-aos-delay="${i*80}">
+                    <img src="${url}" alt="Gallery" class="w-full h-56 object-cover rounded-xl" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80'">
+                    <div class="overlay" onclick="openLightbox('${url}')"><i class="fas fa-search-plus"></i></div>
+                </div>
+            `).join('');
+            AOS.refresh();
+        }
+
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function renderAdminRoomsList() {
+            const list = document.getElementById('admin-rooms-list');
+            list.innerHTML = roomsData.map(room => `
+                <div class="flex items-center gap-4 bg-dark-700 rounded-xl p-4">
+                    <img src="${room.image}" class="w-20 h-20 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1590490360182-c33d57733427?w=100&q=80'">
+                    <div class="flex-1">
+                        <h5 class="text-white font-bold">${room.name}</h5>
+                        <p class="text-gold-400 text-sm">₹${room.price.toLocaleString('en-IN')}/night</p>
+                    </div>
+                    <button onclick="deleteRoom('${room.id}')" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg">Remove</button>
+                </div>
+            `).join('');
+        }
+
+        async function deleteRoom(id) {
+            if (!confirm('Delete this room?')) return;
+            await db.collection('rooms').doc(id).delete();
+            roomsData = roomsData.filter(r => r.id !== id);
+            renderRooms();
+            renderAdminRoomsList();
+        }
+
+        document.getElementById('add-room-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const name = document.getElementById('room-name').value.trim();
+            const price = parseInt(document.getElementById('room-price').value);
+            const amenities = document.getElementById('room-amenities').value.trim();
+            const description = document.getElementById('room-description').value.trim();
+            const imageFile = document.getElementById('room-image-file').files[0];
+            let imageUrl = document.getElementById('room-image-url').value.trim();
+
+            if (!name || !price) return alert('Name and price required.');
+            if (imageFile) {
+                document.getElementById('upload-status').classList.remove('hidden');
+                document.getElementById('upload-status').textContent = 'Uploading...';
+                imageUrl = await uploadToImgBB(imageFile);
+                document.getElementById('upload-status').classList.add('hidden');
+                if (!imageUrl) return alert('Upload failed.');
+            }
+            if (!imageUrl) imageUrl = 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&q=80';
+
+            const id = 'room_' + Date.now();
+            await db.collection('rooms').doc(id).set({
+                name, price, amenities, description, image: imageUrl
+            });
+            roomsData.push({ id, name, price, amenities, description, image: imageUrl });
+            renderRooms();
+            renderAdminRoomsList();
+            document.getElementById('add-room-form').reset();
+            showToast('Room added!');
+        });
+
+        async function uploadToImgBB(file) {
+            const formData = new FormData();
+            formData.append('image', file);
+            formData.append('key', IMGBB_API_KEY);
+            try {
+                const res = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: formData });
+                const data = await res.json();
+                return data.success ? data.data.url : null;
+            } catch { return null; }
+        }
+
+        function renderAdminGalleryList() {
+            const list = document.getElementById('admin-gallery-list');
+            list.innerHTML = galleryData.map((url, i) => `
+                <div class="relative"><img src="${url}" class="w-full h-24 object-cover rounded-lg"><button onclick="deleteGalleryImage(${i})" class="absolute top-1 right-1 bg-red-600 text-white text-xs w-6 h-6 rounded-full">×</button></div>
+            `).join('');
+        }
+
+        async function deleteGalleryImage(index) {
+            if (!confirm('Delete this image?')) return;
+            galleryData.splice(index, 1);
+            await db.collection('settings').doc('gallery').set({ images: galleryData });
+            renderGallery();
+            renderAdminGalleryList();
+        }
+
+        async function addGalleryImage() {
+            const url = document.getElementById('gallery-url').value.trim();
+            if (!url) return;
+            galleryData.push(url);
+            await db.collection('settings').doc('gallery').set({ images: galleryData });
+            document.getElementById('gallery-url').value = '';
+            renderGallery();
+            renderAdminGalleryList();
+            showToast('Image added!');
+        }
+
+        function populateSiteImageInputs() {
+            document.getElementById('hero-images-input').value = siteData.heroImages.join(', ');
+            document.getElementById('about-image-input').value = siteData.aboutImage;
+            document.getElementById('cta-image-input').value = siteData.ctaBackground;
+        }
+
+        async function saveSiteImages() {
+            const heroStr = document.getElementById('hero-images-input').value;
+            const heroImages = heroStr.split(',').map(s => s.trim()).filter(Boolean);
+            const aboutImage = document.getElementById('about-image-input').value.trim();
+            const ctaBg = document.getElementById('cta-image-input').value.trim();
+
+            siteData = { heroImages, aboutImage, ctaBackground: ctaBg };
+            await db.collection('settings').doc('site').set(siteData);
+            renderHeroSlider();
+            renderAboutImage();
+            renderCTABackground();
+            showToast('Site images updated!');
+        }
+
+        function showToast(msg) {
+            const toast = document.createElement('div');
+            toast.textContent = msg;
+            toast.style.cssText = 'position:fixed;bottom:40px;left:50%;transform:translateX(-50%);background:#C9A96E;color:#000;padding:12px 28px;border-radius:50px;font-weight:600;z-index:99999;box-shadow:0 8px 30px rgba(201,169,110,0.5);';
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        function loginAdmin() {
+            if (document.getElementById('admin-password').value === ADMIN_PASSWORD) {
+                document.getElementById('admin-login-screen').classList.add('hidden');
+                document.getElementById('admin-dashboard').classList.remove('hidden');
+                document.getElementById('admin-error').classList.add('hidden');
+                populateSiteImageInputs();
+                renderAdminRoomsList();
+                renderAdminGalleryList();
+            } else {
+                document.getElementById('admin-error').classList.remove('hidden');
+            }
+        }
+        function logoutAdmin() {
+            document.getElementById('admin-login-screen').classList.remove('hidden');
+            document.getElementById('admin-dashboard').classList.add('hidden');
+        }
+        function openAdminPanel() {
+            document.getElementById('admin-panel').classList.add('active');
+            document.getElementById('admin-login-screen').classList.remove('hidden');
+            document.getElementById('admin-dashboard').classList.add('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeAdminPanel() {
+            document.getElementById('admin-panel').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Diamond trigger
+        let clickCount = 0;
+        document.getElementById('admin-trigger').addEventListener('click', () => {
+            clickCount++;
+            if (clickCount >= 3) { clickCount = 0; openAdminPanel(); }
+            setTimeout(() => clickCount = 0, 2000);
+        });
+        window.addEventListener('hashchange', () => {
+            if (window.location.hash === '#admin') openAdminPanel();
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            document.getElementById('navbar').classList.toggle('scrolled', y > 80);
+            document.getElementById('back-to-top').classList.toggle('visible', y > 80);
+            const docH = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('scroll-progress').style.width = docH ? (y / docH * 100) + '%' : '0%';
+        });
+
+        // Mobile menu
+        const hamburger = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            hamburger.querySelector('i').classList.toggle('fa-bars', !mobileMenu.classList.contains('active'));
+            hamburger.querySelector('i').classList.toggle('fa-times', mobileMenu.classList.contains('active'));
+        });
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            hamburger.querySelector('i').classList.add('fa-bars');
+            hamburger.querySelector('i').classList.remove('fa-times');
+        }
+
+        // Forms
+        document.getElementById('booking-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const msg = `Hi Hotel Neelam! Check availability: ${document.getElementById('checkin').value} to ${document.getElementById('checkout').value}, ${document.getElementById('adults').value} adults, ${document.getElementById('room-type-select').value}`;
+            window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`, '_blank');
+        });
+        document.getElementById('contact-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('Message sent!'); e.target.reset(); });
+        document.getElementById('newsletter-form').addEventListener('submit', (e) => { e.preventDefault(); showToast('Subscribed!'); e.target.reset(); });
+
+        new Swiper('.testimonial-swiper', { loop: true, autoplay: { delay: 4000 }, pagination: { el: '.swiper-pagination', clickable: true } });
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    document.querySelectorAll('.counter-number').forEach(c => {
+                        const target = +c.dataset.target;
+                        const start = performance.now();
+                        function update(now) {
+                            const p = Math.min((now - start) / 2000, 1);
+                            c.textContent = Math.floor(p * target).toLocaleString('en-IN') + '+';
+                            if (p < 1) requestAnimationFrame(update);
+                        }
+                        requestAnimationFrame(update);
+                    });
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        const counterSec = document.querySelector('.counter-number')?.closest('section');
+        if (counterSec) counterObserver.observe(counterSec);
+
+        document.getElementById('checkin').value = new Date().toISOString().split('T')[0];
+        const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+        document.getElementById('checkout').value = tomorrow;
+
+        loadData();
+    </script>
+</body>
+</html>
